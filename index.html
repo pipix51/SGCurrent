@@ -6,8 +6,17 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-       <div class="mdl-layout__drawer">
+    <!-- Uses a header that scrolls with the text, rather than staying locked at the top -->
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">SGCurrent</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link mdl-menu__item--full-bleed-divider" href="">Home</a>
@@ -20,11 +29,13 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <h3>Home</h3>
-        <p>This is the main page for the SGCurrent application. This application was created by Y3 DHSJHICC members.<p>
-        <p>You can choose to browse the articles about national education, public policies and current affairs which we offer. You can choose the articles you want to read based on the scope (local scope, regional scope and global scope). We hope that you, the user, would be able to gain some knowledge through using this app, especially knowledge in an area that you are interested in. As this app revolves around the community sharing their opinions on issues which concern them, we strongly encourage you to post comments on topics and articles you have an opinion on. You can even send an article you wish to be published in the app (just look in the Administrators tab).</p>
-        <p>As this app is still a work-in-progress, we hope that you would be able to provide us with some valuable information about your opinions and experiences of this application. If you have any queries, please look in the Frequently Asked Questions (FAQs) tab to check if your question exists before contacting the administrators (we are busy people you know). If you have discovered any bugs, you can either contact the administrators or preferably leave a comment on the Google Play Store</p>
-        <p>Enjoy learning with SGuider!</p>
+        <div class="page-content">
+          <h3>Home</h3>
+          <p>This is the main page for the SGCurrent application. This application was created by Y3 DHSJHICC members.<p>
+          <p>You can choose to browse the articles about national education, public policies and current affairs which we offer. You can choose the articles you want to read based on the scope (local scope, regional scope and global scope). We hope that you, the user, would be able to gain some knowledge through using this app, especially knowledge in an area that you are interested in. As this app revolves around the community sharing their opinions on issues which concern them, we strongly encourage you to post comments on topics and articles you have an opinion on. You can even send an article you wish to be published in the app (just look in the Administrators tab).</p>
+          <p>As this app is still a work-in-progress, we hope that you would be able to provide us with some valuable information about your opinions and experiences of this application. If you have any queries, please look in the Frequently Asked Questions (FAQs) tab to check if your question exists before contacting the administrators (we are busy people you know). If you have discovered any bugs, you can either contact the administrators or preferably leave a comment on the Google Play Store</p>
+          <p>Enjoy learning with SGuider!</p>
+        </div>
       </main>
     </div>
   </body>
