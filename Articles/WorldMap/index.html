@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>	
+		<link href="lg-map/lg-map.css" rel="stylesheet" type="text/css" />
+		<script src="lg-map/lg-map-libs.js" type="text/javascript"></script>
+		<script src="lg-map/lg-map-panzoom.js" type="text/javascript"></script>
+		<script src="lg-map/lg-map.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="lg-map-wrapper" id="world-map"></div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			$('#world-map').LGMap({
+				map: 'world'
+			});
+		});
+	</script>
+</html>
