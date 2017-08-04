@@ -5,13 +5,6 @@ html {
   font-family: "Roboto", Helvetica, sans-serif;
 }
 
-body {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 100px;
-  overflow-x: hidden;
-}
-
 .description {
   max-width: 600px;
   margin: 0 auto;
