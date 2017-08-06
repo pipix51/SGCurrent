@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Select - onchange example</title>
+</head>
+
+<body>
+  <label for="CountrySelectedA">Selected Country A: </label>
+  <select id="CountrySelectedA">
+      <option>China</option>
+      <option>USA</option>
+      <option>India</option>
+    </select>
+  <label for="CountrySelectedB">Selected Country B: </label>
+  <select id="CountrySelectedB">
+      <option>China</option>
+      <option>USA</option>
+      <option>India</option>
+    </select>
+  <table>
+    <tr>
+      <th>Country</th>
+      <th id="CountryA"></th>
+      <th id="CountryB"></th>
+    </tr>
+    <tr>
+      <th>Population</th>
+      <td id="PopulationA"></td>
+      <td id="PopulationB"></td>
+    </tr>
+    <tr>
+      <th>Median Age</th>
+      <td id="MedianAgeA"></td>
+      <td id="MedianAgeB"></td>
+    </tr>
+    <tr>
+      <th>Total GDP</th>
+      <td id="TotalGDPA"></td>
+      <td id="TotalGDPB"></td>
+    </tr>
+    <tr>
+      <th>GDP Per Capita</th>
+      <td id="GDPCapitaA"></td>
+      <td id="GDPCapitaB"></td>
+    </tr>
+    <tr>
+      <th>Currency Per USD</th>
+      <td id="CurrencyA"></td>
+      <td id="CurrencyB"></td>
+    </tr>
+    <tr>
+      <th>Coordinates</th>
+      <td id="CoordinatesA"></td>
+      <td id="CoordinatesB"></td>
+    </tr>
+    <tr>
+      <th>Land Mass</th>
+      <td id="LandMassA"></td>
+      <td id="LandMassB"></td>
+  </table>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    var China = [
+      "1,373,541,278 (July 2016 est.)",
+      "37.1 years",
+      "$21.14 trillion (2016 est.)",
+      "$14,600 (2016 est.)",
+      "6.626 (2016 est.)",
+      "35 00 N, 105 00 E",
+      "9,596,960 sq km"
+    ];
+    var USA = [
+      "323,995,528 (July 2016 est.)",
+      "37.9 years",
+      "$18.56 trillion (2016 est.)",
+      "$57,300 (2016 est.)",
+      "1.000",
+      "38 00 N, 97 00 W",
+      "9,833,517 sq km"
+    ];
+    var India = [
+      "1,266,883,598 (July 2016 est.)",
+      "27.6 years",
+      "$8.721 trillion (2016 est.)",
+      "$6,700 (2016 est.)",
+      "68.3 (2016 est.)",
+      "20 00 N, 77 00 E",
+      "3,287,263 sq km"
+    ]
+    $("#CountrySelectedA").on("change", function() {
+      var selectedA = $(this).val();
+      if (selectedA == "China") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(China[0]);
+        $("#MedianAgeA").html(China[1]);
+        $("#TotalGDPA").html(China[2]);
+        $("#GDPCapitaA").html(China[3]);
+        $("#CurrencyA").html(China[4]);
+        $("#CoordinatesA").html(China[5]);
+        $("#LandMassA").html(China[6]);
+      }
+      if (selectedA == "USA") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(USA[0]);
+        $("#MedianAgeA").html(USA[1]);
+        $("#TotalGDPA").html(USA[2]);
+        $("#GDPCapitaA").html(USA[3]);
+        $("#CurrencyA").html(USA[4]);
+        $("#CoordinatesA").html(USA[5]);
+        $("#LandMassA").html(USA[6]);
+      }
+      if (selectedA == "India") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(India[0]);
+        $("#MedianAgeA").html(India[1]);
+        $("#TotalGDPA").html(India[2]);
+        $("#GDPCapitaA").html(India[3]);
+        $("#CurrencyA").html(India[4]);
+        $("#CoordinatesA").html(India[5]);
+        $("#LandMassA").html(India[6]);
+      }
+    });
+    $("#CountrySelectedB").on("change", function() {
+      var selectedB = $(this).val();
+      if (selectedB == "China") {
+        $("#CountryB").html(selectedB);
+        $("#PopulationB").html(China[0]);
+        $("#MedianAgeB").html(China[1]);
+        $("#TotalGDPB").html(China[2]);
+        $("#GDPCapitaB").html(China[3]);
+        $("#CurrencyB").html(China[4]);
+        $("#CoordinatesB").html(China[5]);
+        $("#LandMassB").html(China[6]);
+      }
+      if (selectedB == "USA") {
+        $("#CountryB").html(selectedB);
+        $("#PopulationB").html(USA[0]);
+        $("#MedianAgeB").html(USA[1]);
+        $("#TotalGDPB").html(USA[2]);
+        $("#GDPCapitaB").html(USA[3]);
+        $("#CurrencyB").html(USA[4]);
+        $("#CoordinatesB").html(USA[5]);
+        $("#LandMassB").html(USA[6]);
+      }
+      if (selectedB == "India") {
+        $("#CountryB").html(selectedB);
+        $("#PopulationB").html(India[0]);
+        $("#MedianAgeB").html(India[1]);
+        $("#TotalGDPB").html(India[2]);
+        $("#GDPCapitaB").html(India[3]);
+        $("#CurrencyB").html(India[4]);
+        $("#CoordinatesB").html(India[5]);
+        $("#LandMassB").html(India[6]);
+      }
+    });
+  </script>
+</body>
+
+</html>
