@@ -1,11 +1,11 @@
 (function() {
   var questions = [{
-    question: "What is 2*5?",
+    question: "Donald Trump, the president of the United States, fired his new communications director Anthony Scaramucci after __ days?",
     choices: [2, 5, 10, 15, 20],
     correctAnswer: 2
   }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
+    question: "Where will the Summer Olympics in 2028 be held?",
+    choices: ["Paris", "Tokyo", "New York", "Shanghai", "Los Angeles"],
     correctAnswer: 4
   }, {
     question: "What is 8*9?",
