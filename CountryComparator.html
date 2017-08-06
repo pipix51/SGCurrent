@@ -1,255 +1,162 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Timeline 2017</title>
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#3372DF">
-
-  <link rel="shortcut icon" href="images/favicon.png">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
-  <link rel="stylesheet" href="TimelineDesign.css">
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function() {
-          (i[r].q = i[r].q || []).push(arguments);
-        }), (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "https://www.google-analytics.com/analytics.js",
-      "ga"
-    );
-    ga("create", "UA-98296318-1", "auto");
-    ga("send", "pageview");
-  </script>
-  <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    .article-content {
-      margin: 30px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--red mdl-color-text--white">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Timeline 2017</span>
-        <div class="mdl-layout-spacer"></div>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">TrendSetter</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/local.html">Local</a>
-        <a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/regional.html">Regional</a>
-        <a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/global.html">Global</a>
-        <a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/details.html">Details</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-    </main>
-  </div>
-  <div class="demo-ribbon"></div>
-  <br>
-  <main class="demo-main mdl-layout__content">
-    <div class="demo-container mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-      <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-        <div class="article-content">
-          <div class="demo-crumbs mdl-color-text--black-500" style="font-size: 30px; font-color:#000000; line-height: 1.2;">
-            Timeline
-          </div>
-          <label for="CountrySelectedA">Selected Country A: </label>
-  <select id="CountrySelectedA">
-      <option>China</option>
-      <option>USA</option>
-      <option>India</option>
-    </select>
-  <label for="CountrySelectedB">Selected Country B: </label>
-  <select id="CountrySelectedB">
-      <option>China</option>
-      <option>USA</option>
-      <option>India</option>
-    </select>
-  <table>
-    <tr>
-      <th>Country</th>
-      <th id="CountryA"></th>
-      <th id="CountryB"></th>
-    </tr>
-    <tr>
-      <th>Population</th>
-      <td id="PopulationA"></td>
-      <td id="PopulationB"></td>
-    </tr>
-    <tr>
-      <th>Median Age</th>
-      <td id="MedianAgeA"></td>
-      <td id="MedianAgeB"></td>
-    </tr>
-    <tr>
-      <th>Total GDP</th>
-      <td id="TotalGDPA"></td>
-      <td id="TotalGDPB"></td>
-    </tr>
-    <tr>
-      <th>GDP Per Capita</th>
-      <td id="GDPCapitaA"></td>
-      <td id="GDPCapitaB"></td>
-    </tr>
-    <tr>
-      <th>Currency Per USD</th>
-      <td id="CurrencyA"></td>
-      <td id="CurrencyB"></td>
-    </tr>
-    <tr>
-      <th>Coordinates</th>
-      <td id="CoordinatesA"></td>
-      <td id="CoordinatesB"></td>
-    </tr>
-    <tr>
-      <th>Land Mass</th>
-      <td id="LandMassA"></td>
-      <td id="LandMassB"></td>
-  </table>
-        </div>
-      </div>
-  </main>
-  </div>
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>
-    var China = [
-      "1,373,541,278 (July 2016 est.)",
-      "37.1 years",
-      "$21.14 trillion (2016 est.)",
-      "$14,600 (2016 est.)",
-      "6.626 (2016 est.)",
-      "35 00 N, 105 00 E",
-      "9,596,960 sq km"
-    ];
-    var USA = [
-      "323,995,528 (July 2016 est.)",
-      "37.9 years",
-      "$18.56 trillion (2016 est.)",
-      "$57,300 (2016 est.)",
-      "1.000",
-      "38 00 N, 97 00 W",
-      "9,833,517 sq km"
-    ];
-    var India = [
-      "1,266,883,598 (July 2016 est.)",
-      "27.6 years",
-      "$8.721 trillion (2016 est.)",
-      "$6,700 (2016 est.)",
-      "68.3 (2016 est.)",
-      "20 00 N, 77 00 E",
-      "3,287,263 sq km"
-    ]
-    $("#CountrySelectedA").on("change", function() {
-      var selectedA = $(this).val();
-      if (selectedA == "China") {
-        $("#CountryA").html(selectedA);
-        $("#PopulationA").html(China[0]);
-        $("#MedianAgeA").html(China[1]);
-        $("#TotalGDPA").html(China[2]);
-        $("#GDPCapitaA").html(China[3]);
-        $("#CurrencyA").html(China[4]);
-        $("#CoordinatesA").html(China[5]);
-        $("#LandMassA").html(China[6]);
-      }
-      if (selectedA == "USA") {
-        $("#CountryA").html(selectedA);
-        $("#PopulationA").html(USA[0]);
-        $("#MedianAgeA").html(USA[1]);
-        $("#TotalGDPA").html(USA[2]);
-        $("#GDPCapitaA").html(USA[3]);
-        $("#CurrencyA").html(USA[4]);
-        $("#CoordinatesA").html(USA[5]);
-        $("#LandMassA").html(USA[6]);
-      }
-      if (selectedA == "India") {
-        $("#CountryA").html(selectedA);
-        $("#PopulationA").html(India[0]);
-        $("#MedianAgeA").html(India[1]);
-        $("#TotalGDPA").html(India[2]);
-        $("#GDPCapitaA").html(India[3]);
-        $("#CurrencyA").html(India[4]);
-        $("#CoordinatesA").html(India[5]);
-        $("#LandMassA").html(India[6]);
-      }
-    });
-    $("#CountrySelectedB").on("change", function() {
-      var selectedB = $(this).val();
-      if (selectedB == "China") {
-        $("#CountryB").html(selectedB);
-        $("#PopulationB").html(China[0]);
-        $("#MedianAgeB").html(China[1]);
-        $("#TotalGDPB").html(China[2]);
-        $("#GDPCapitaB").html(China[3]);
-        $("#CurrencyB").html(China[4]);
-        $("#CoordinatesB").html(China[5]);
-        $("#LandMassB").html(China[6]);
-      }
-      if (selectedB == "USA") {
-        $("#CountryB").html(selectedB);
-        $("#PopulationB").html(USA[0]);
-        $("#MedianAgeB").html(USA[1]);
-        $("#TotalGDPB").html(USA[2]);
-        $("#GDPCapitaB").html(USA[3]);
-        $("#CurrencyB").html(USA[4]);
-        $("#CoordinatesB").html(USA[5]);
-        $("#LandMassB").html(USA[6]);
-      }
-      if (selectedB == "India") {
-        $("#CountryB").html(selectedB);
-        $("#PopulationB").html(India[0]);
-        $("#MedianAgeB").html(India[1]);
-        $("#TotalGDPB").html(India[2]);
-        $("#GDPCapitaB").html(India[3]);
-        $("#CurrencyB").html(India[4]);
-        $("#CoordinatesB").html(India[5]);
-        $("#LandMassB").html(India[6]);
-      }
-    });
-  </script>
-</body>
-
-</html>
++<!DOCTYPE HTML>
+ +<html>
+ +
+ +<head>
+ +  <meta charset="utf-8">
+ +  <title>Select - onchange example</title>
+ +</head>
+ +
+ +<body>
+ +  <label for="CountrySelectedA">Selected Country A: </label>
+ +  <select id="CountrySelectedA">
+ +      <option>China</option>
+ +      <option>USA</option>
+ +      <option>India</option>
+ +    </select>
+ +  <label for="CountrySelectedB">Selected Country B: </label>
+ +  <select id="CountrySelectedB">
+ +      <option>China</option>
+ +      <option>USA</option>
+ +      <option>India</option>
+ +    </select>
+ +  <table>
+ +    <tr>
+ +      <th>Country</th>
+ +      <th id="CountryA"></th>
+ +      <th id="CountryB"></th>
+ +    </tr>
+ +    <tr>
+ +      <th>Population</th>
+ +      <td id="PopulationA"></td>
+ +      <td id="PopulationB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>Median Age</th>
+ +      <td id="MedianAgeA"></td>
+ +      <td id="MedianAgeB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>Total GDP</th>
+ +      <td id="TotalGDPA"></td>
+ +      <td id="TotalGDPB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>GDP Per Capita</th>
+ +      <td id="GDPCapitaA"></td>
+ +      <td id="GDPCapitaB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>Currency Per USD</th>
+ +      <td id="CurrencyA"></td>
+ +      <td id="CurrencyB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>Coordinates</th>
+ +      <td id="CoordinatesA"></td>
+ +      <td id="CoordinatesB"></td>
+ +    </tr>
+ +    <tr>
+ +      <th>Land Mass</th>
+ +      <td id="LandMassA"></td>
+ +      <td id="LandMassB"></td>
+ +  </table>
+ +
+ +  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ +  <script>
+ +    var China = [
+ +      "1,373,541,278 (July 2016 est.)",
+ +      "37.1 years",
+ +      "$21.14 trillion (2016 est.)",
+ +      "$14,600 (2016 est.)",
+ +      "6.626 (2016 est.)",
+ +      "35 00 N, 105 00 E",
+ +      "9,596,960 sq km"
+ +    ];
+ +    var USA = [
+ +      "323,995,528 (July 2016 est.)",
+ +      "37.9 years",
+ +      "$18.56 trillion (2016 est.)",
+ +      "$57,300 (2016 est.)",
+ +      "1.000",
+ +      "38 00 N, 97 00 W",
+ +      "9,833,517 sq km"
+ +    ];
+ +    var India = [
+ +      "1,266,883,598 (July 2016 est.)",
+ +      "27.6 years",
+ +      "$8.721 trillion (2016 est.)",
+ +      "$6,700 (2016 est.)",
+ +      "68.3 (2016 est.)",
+ +      "20 00 N, 77 00 E",
+ +      "3,287,263 sq km"
+ +    ]
+ +    $("#CountrySelectedA").on("change", function() {
+ +      var selectedA = $(this).val();
+ +      if (selectedA == "China") {
+ +        $("#CountryA").html(selectedA);
+ +        $("#PopulationA").html(China[0]);
+ +        $("#MedianAgeA").html(China[1]);
+ +        $("#TotalGDPA").html(China[2]);
+ +        $("#GDPCapitaA").html(China[3]);
+ +        $("#CurrencyA").html(China[4]);
+ +        $("#CoordinatesA").html(China[5]);
+ +        $("#LandMassA").html(China[6]);
+ +      }
+ +      if (selectedA == "USA") {
+ +        $("#CountryA").html(selectedA);
+ +        $("#PopulationA").html(USA[0]);
+ +        $("#MedianAgeA").html(USA[1]);
+ +        $("#TotalGDPA").html(USA[2]);
+ +        $("#GDPCapitaA").html(USA[3]);
+ +        $("#CurrencyA").html(USA[4]);
+ +        $("#CoordinatesA").html(USA[5]);
+ +        $("#LandMassA").html(USA[6]);
+ +      }
+ +      if (selectedA == "India") {
+ +        $("#CountryA").html(selectedA);
+ +        $("#PopulationA").html(India[0]);
+ +        $("#MedianAgeA").html(India[1]);
+ +        $("#TotalGDPA").html(India[2]);
+ +        $("#GDPCapitaA").html(India[3]);
+ +        $("#CurrencyA").html(India[4]);
+ +        $("#CoordinatesA").html(India[5]);
+ +        $("#LandMassA").html(India[6]);
+ +      }
+ +    });
+ +    $("#CountrySelectedB").on("change", function() {
+ +      var selectedB = $(this).val();
+ +      if (selectedB == "China") {
+ +        $("#CountryB").html(selectedB);
+ +        $("#PopulationB").html(China[0]);
+ +        $("#MedianAgeB").html(China[1]);
+ +        $("#TotalGDPB").html(China[2]);
+ +        $("#GDPCapitaB").html(China[3]);
+ +        $("#CurrencyB").html(China[4]);
+ +        $("#CoordinatesB").html(China[5]);
+ +        $("#LandMassB").html(China[6]);
+ +      }
+ +      if (selectedB == "USA") {
+ +        $("#CountryB").html(selectedB);
+ +        $("#PopulationB").html(USA[0]);
+ +        $("#MedianAgeB").html(USA[1]);
+ +        $("#TotalGDPB").html(USA[2]);
+ +        $("#GDPCapitaB").html(USA[3]);
+ +        $("#CurrencyB").html(USA[4]);
+ +        $("#CoordinatesB").html(USA[5]);
+ +        $("#LandMassB").html(USA[6]);
+ +      }
+ +      if (selectedB == "India") {
+ +        $("#CountryB").html(selectedB);
+ +        $("#PopulationB").html(India[0]);
+ +        $("#MedianAgeB").html(India[1]);
+ +        $("#TotalGDPB").html(India[2]);
+ +        $("#GDPCapitaB").html(India[3]);
+ +        $("#CurrencyB").html(India[4]);
+ +        $("#CoordinatesB").html(India[5]);
+ +        $("#LandMassB").html(India[6]);
+ +      }
+ +    });
+ +  </script>
+ +</body>
+ +
+ +</html>
