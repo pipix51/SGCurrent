@@ -8,17 +8,17 @@
     choices: ["Paris", "Tokyo", "New York", "Shanghai", "Los Angeles"],
     correctAnswer: 4
   }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
-  }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "Which South American country did the United Sataes impose sanctions on?",
+    choices: ["Brazil", "Argentina", "Chile", "Venezuela", "Bolivia"],
     correctAnswer: 3
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
-    correctAnswer: 4
+    question: "Which country is conducting a trial for members who participated in a failed coup?",
+    choices: ["Russia", "Italy", "Spain", "Turkey", "Egypt"],
+    correctAnswer: 3
+  }, {
+    question: "What is the new car model released by Tesla Motors?",
+    choices: ["Model I", "Model E", "Model 2", "Model 3", "Model 4"],
+    correctAnswer: 3
   }];
   
   var questionCounter = 0; //Tracks question number
