@@ -91,15 +91,23 @@
               
   <label for="CountrySelectedA">Selected Country A: </label>
   <select id="CountrySelectedA">
+	   <option>Country A</option>
        <option>China</option>
        <option>USA</option>
        <option>India</option>
+	   <option>Russia</option>
+	   <option>Japan</option>
+	   <option>Australia</option>
      </select>
-  <label for="CountrySelectedB">	Selected Country B: </label>
+  <label for="CountrySelectedB">Selected Country B: </label>
   <select id="CountrySelectedB">
+	   <option>Country B</option>
        <option>China</option>
        <option>USA</option>
        <option>India</option>
+	   <option>Russia</option>
+	   <option>Japan</option>
+	   <option>Australia</option>
      </select>
   <table>
     <tr>
@@ -172,6 +180,33 @@
       "20 00 N, 77 00 E",
       "3,287,263 sq km"
     ];
+	var Russia = [
+		"142,355,415 (July 2016 est.)",
+		"39.3 years",
+		"$3.751 trillion (2016 est.)",
+		"$26,100 (2016 est.)",
+		"68.06 (2016 est.)",
+		"60 00 N, 100 00 E",
+		"17,098,242 sq km"
+	];
+	var Japan = [
+		"126,702,133 (July 2016 est.)",
+		"46.9 years",
+		"$4.932 trillion (2016 est.)",
+		"$38,900 (2016 est.)",
+		"107.1 (2016 est.)",
+		"36 00 N, 138 00 E",
+		"377,915 sq km"
+	];
+	var Australia = [
+		"22,992,654 (July 2016 est.)",
+		"38.6 years",
+		"$1.257 trillion (2016 est.)",
+		"$48,800 (2016 est.)",
+		"1.352 (2016 est.)",
+		"27 00 S, 133 00 E",
+		"7,741,220 sq km"
+	];
     $("#CountrySelectedA").on("change", function() {
       var selectedA = $(this).val();
       if (selectedA == "China") {
@@ -203,6 +238,36 @@
         $("#CurrencyA").html(India[4]);
         $("#CoordinatesA").html(India[5]);
         $("#LandMassA").html(India[6]);
+      }
+	  if (selectedA == "Russia") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(Russia[0]);
+        $("#MedianAgeA").html(Russia[1]);
+        $("#TotalGDPA").html(Russia[2]);
+        $("#GDPCapitaA").html(Russia[3]);
+        $("#CurrencyA").html(Russia[4]);
+        $("#CoordinatesA").html(Russia[5]);
+        $("#LandMassA").html(Russia[6]);
+      }
+	  if (selectedA == "Japan") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(Japan[0]);
+        $("#MedianAgeA").html(Japan[1]);
+        $("#TotalGDPA").html(Japan[2]);
+        $("#GDPCapitaA").html(Japan[3]);
+        $("#CurrencyA").html(Japan[4]);
+        $("#CoordinatesA").html(Japan[5]);
+        $("#LandMassA").html(Japan[6]);
+      }
+	  if (selectedA == "Australia") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(Australia[0]);
+        $("#MedianAgeA").html(Australia[1]);
+        $("#TotalGDPA").html(Australia[2]);
+        $("#GDPCapitaA").html(Australia[3]);
+        $("#CurrencyA").html(Australia[4]);
+        $("#CoordinatesA").html(Australia[5]);
+        $("#LandMassA").html(Australia[6]);
       }
     });
     $("#CountrySelectedB").on("change", function() {
