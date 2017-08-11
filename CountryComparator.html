@@ -207,6 +207,34 @@
 		"27 00 S, 133 00 E",
 		"7,741,220 sq km"
 	];
+	var Indonesia = [
+		"258,316,051 (July 2016 est.)",
+		"29.9 years",
+		"$3.033 trillion (2016 est.)",
+		"$11,700 (2016 est.)",
+		"13,483 (2016 est.)",
+		"5 00 S, 120 00 E",
+		"1,904,569 sq km"
+	];
+	var UK = [
+		"64,430,428 (July 2016 est.)",
+		"40.5 years",
+		"$2.788 trillion (2016 est.)",
+		"$42,500 (2016 est.)",
+		"0.7391 (2016 est.)",
+		"54 00 N, 2 00 W",
+		"243,610 sq km"
+	];
+	var Germany = [
+		"80,722,792 (July 2016 est.)",
+		"46.8 years",
+		"$3.979 trillion (2016 est.)",
+		"$48,200 (2016 est.)",
+		"0.9214 (2016 est.)",
+		"51 00 N, 9 00 E",
+		"357,022 sq km"
+	];
+	  
     $("#CountrySelectedA").on("change", function() {
       var selectedA = $(this).val();
       if (selectedA == "China") {
@@ -249,7 +277,7 @@
         $("#CoordinatesA").html(Russia[5]);
         $("#LandMassA").html(Russia[6]);
       }
-	  if (selectedA == "Japan") {
+	if (selectedA == "Japan") {
         $("#CountryA").html(selectedA);
         $("#PopulationA").html(Japan[0]);
         $("#MedianAgeA").html(Japan[1]);
@@ -259,7 +287,7 @@
         $("#CoordinatesA").html(Japan[5]);
         $("#LandMassA").html(Japan[6]);
       }
-	  if (selectedA == "Australia") {
+	if (selectedA == "Australia") {
         $("#CountryA").html(selectedA);
         $("#PopulationA").html(Australia[0]);
         $("#MedianAgeA").html(Australia[1]);
@@ -268,6 +296,36 @@
         $("#CurrencyA").html(Australia[4]);
         $("#CoordinatesA").html(Australia[5]);
         $("#LandMassA").html(Australia[6]);
+      }
+	if (selectedA == "Indonesia") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(Indonesia[0]);
+        $("#MedianAgeA").html(Indonesia[1]);
+        $("#TotalGDPA").html(Indonesia[2]);
+        $("#GDPCapitaA").html(Indonesia[3]);
+        $("#CurrencyA").html(Indonesia[4]);
+        $("#CoordinatesA").html(Indonesia[5]);
+        $("#LandMassA").html(Indonesia[6]);
+      }
+	if (selectedA == "UK") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(UK[0]);
+        $("#MedianAgeA").html(UK[1]);
+        $("#TotalGDPA").html(UK[2]);
+        $("#GDPCapitaA").html(UK[3]);
+        $("#CurrencyA").html(UK[4]);
+        $("#CoordinatesA").html(UK[5]);
+        $("#LandMassA").html(UK[6]);
+      }
+	if (selectedA == "Germany") {
+        $("#CountryA").html(selectedA);
+        $("#PopulationA").html(Germany[0]);
+        $("#MedianAgeA").html(Germany[1]);
+        $("#TotalGDPA").html(Germany[2]);
+        $("#GDPCapitaA").html(Germany[3]);
+        $("#CurrencyA").html(Germany[4]);
+        $("#CoordinatesA").html(Germany[5]);
+        $("#LandMassA").html(Germany[6]);
       }
     });
     $("#CountrySelectedB").on("change", function() {
