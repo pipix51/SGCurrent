@@ -37,11 +37,11 @@
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
 		
-		document.getElementById(bookmark).style.display = 'none';
+		document.getElementById("bookmark").style.display = 'none';
 		
 		function showBookmark() {
-			document.getElementById(nonBookmark).style.display = 'none';
-			document.getElementById(bookmark).style.display = '';
+			document.getElementById("nonBookmark").style.display = 'none';
+			document.getElementById("bookmark").style.display = '';
 			
 			var d = new Date();
     		d.setTime(d.getTime() + (exdays*14*24*60*60*1000));
