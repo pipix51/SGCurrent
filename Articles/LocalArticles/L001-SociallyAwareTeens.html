@@ -36,6 +36,18 @@
 
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
+		
+		document.getElementById(bookmark).style.display = 'none';
+		
+		function showBookmark() {
+			document.getElementById(nonBookmark).style.display = 'none';
+			document.getElementById(bookmark).style.display = '';
+			
+			var d = new Date();
+    		d.setTime(d.getTime() + (exdays*14*24*60*60*1000));
+    		var expires = "expires="+ d.toUTCString();
+    		document.cookie = "bookmarkL001" + "=" + "true" + ";" + expires + ";path=/";
+		};
     	</script>
         <style>
         #view-source {
@@ -58,19 +70,21 @@
 		<div class="mdl-layout__header-row">
 			<span class="mdl-layout-title">Social Awareness In Teenagers</span>
 			<div class="mdl-layout-spacer"></div>
+			<i class="material-icons" id="nonBookmark" onclick="showBookmark()">bookmark_border</i>
+			<i class="material-icons" id="bookmark">bookmark</i>
 		</div>
 	</header>
 	<div class="mdl-layout__drawer">
 		<span class="mdl-layout-title">TrendSetter</span>
 		<nav class="mdl-navigation">
 			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/index.html">Home</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/local.html">Local</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/regional.html">Regional</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/global.html">Global</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/WorldMap/WorldMap.html">World Map</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/Timeline/Timeline.html">Timeline</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/CountryComparator.html">Country Comparator</a>
-	<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/details.html">Details</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/local.html">Local</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/regional.html">Regional</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/global.html">Global</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/WorldMap/WorldMap.html">World Map</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/Articles/Timeline/Timeline.html">Timeline</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/CountryComparator.html">Country Comparator</a>
+			<a class="mdl-navigation__link" href="https://pipix51.github.io/TrendSetter/details.html">Details</a>
 		</nav>
 	</div>
       <div class="demo-ribbon"></div>
@@ -79,7 +93,7 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-					<div class="article-content">
+			<div class="article-content">
             <div class="demo-crumbs mdl-color-text--black-500" style="font-size: 30px; font-color:#000000; line-height: 1.2;">
               Should Singaporean Teenagers Become Socially Aware?
             </div>
@@ -96,22 +110,9 @@
             <p><strong>
                   The editor agrees with the article. More should be done to raise social awareness in Singapore, given the fact that its presence has numerous benefits. Replacing the apathy of current Singaporean teenagers with social awareness is not a task which should be left to the government and educators only; parents should also make teenagers aware of the problems and solutions to issues prevalent in society instead of sheltering their dearest sons and daughters.
             </strong></p>
-            <h3 style="font-size: 20px; font-color:#333333">References</h3>
-            <ul class='mdl-list'>
-               <li class="mdl-list__item">
-    						<span class="mdl-list__item-primary-content">[1] https://en.wikipedia.org/wiki/Social_consciousness</span>
-  						</li>
-  						<li class="mdl-list__item">
-    						<span class="mdl-list__item-primary-content">[2] https://www.mccy.gov.sg/~/link.aspx?_id=2B0F422DBD9543A6AF60DCE0D4940E48&_z=z</span>
-  						</li>
-  						<li class="mdl-list__item">
-    							<span class="mdl-list__item-primary-content">[3] https://www.youthcorps.sg/</span>
-  						</li>
-						</ul>
-				
-		  		</div>
-					</div>
-				</div>
+		</div>
+		</div>
+	</div>
       </main>
 	</div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
