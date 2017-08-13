@@ -41,7 +41,7 @@
 			document.getElementById("bookmark").innerHTML = "bookmark";
 			
 			var d = new Date();
-    			d.setTime(d.getTime() + (exdays*14*24*60*60*1000));
+    			d.setTime(d.getTime() + (14*24*60*60*1000));
     			var expires = "expires="+ d.toUTCString();
     			document.cookie = "cookie1" + "=" + "Local Article 1 - Socially Aware Teenagers" + ";" + expires + ";path=/";
 		};
