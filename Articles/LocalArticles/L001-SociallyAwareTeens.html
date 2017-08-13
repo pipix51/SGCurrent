@@ -37,16 +37,14 @@
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
 		
-		document.getElementById("bookmark").style.display = 'none';
 		
 		function showBookmark() {
-			document.getElementById("nonBookmark").style.display = 'none';
-			document.getElementById("bookmark").style.display = '';
+			document.getElementById("bookmark").innerHTML = "bookmark";
 			
 			var d = new Date();
-    		d.setTime(d.getTime() + (exdays*14*24*60*60*1000));
-    		var expires = "expires="+ d.toUTCString();
-    		document.cookie = "bookmarkL001" + "=" + "true" + ";" + expires + ";path=/";
+    			d.setTime(d.getTime() + (exdays*14*24*60*60*1000));
+    			var expires = "expires="+ d.toUTCString();
+    			document.cookie = "bookmarkL001" + "=" + "true" + ";" + expires + ";path=/";
 		};
     	</script>
         <style>
@@ -70,8 +68,7 @@
 		<div class="mdl-layout__header-row">
 			<span class="mdl-layout-title">Social Awareness In Teenagers</span>
 			<div class="mdl-layout-spacer"></div>
-			<i class="material-icons" id="nonBookmark" onclick="showBookmark()">bookmark_border</i>
-			<i class="material-icons" id="bookmark">bookmark</i>
+			<i class="material-icons" id="bookmark" onclick="showBookmark()">bookmark_border</i>
 		</div>
 	</header>
 	<div class="mdl-layout__drawer">
