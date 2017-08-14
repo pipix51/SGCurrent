@@ -52,16 +52,8 @@
 	    return ""
         };
         
-        var counter=0;
-        for (var alpha=0; alpha<20; alpha++){
-            bookmark = getCookie("cookie"+alpha.toString());
-            if (counter > 10){
-                break;
-            }
-            if (bookmark != ""){
-                document.getElementById("bookmark"+counter.toString()).innerHTML = bookmark;
-                counter++;
-            }
+        if (getCookie("cookie1")) {
+	    document.getElementById("bookmark1").innerHTML = getCookie("cookie1");
         };
             
         
