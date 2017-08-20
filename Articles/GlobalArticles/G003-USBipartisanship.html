@@ -33,8 +33,41 @@
   		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
+		
+		function showBookmark() {
+			document.getElementById("bookmark").innerHTML = "bookmark";
+			
+			var d = new Date();
+    			d.setTime(d.getTime() + (14*24*60*60*1000));
+    			var expires = "expires="+ d.toUTCString();
+    			document.cookie = "cookie9" + "=" + "Global Article 3 - US Bipartisanship" + ";" + expires + ";path=/";
+		};
+		
+		window.onload = function () {
+			
+			function getCookie(cname) {
+            			var name = cname + "=";
+            			var decodedCookie = decodeURIComponent(document.cookie);
+            			var ca = decodedCookie.split(';');
+            			for(var i = 0; i <ca.length; i++) {
+                			var c = ca[i];
+                			while (c.charAt(0) == ' ') {
+                    				c = c.substring(1);
+                			}
+                			if (c.indexOf(name) == 0) {
+                    				return c.substring(name.length, c.length);
+                			}
+            			}
+	    			return ""
+        		};
+			
+			if (getCookie("cookie9")){
+				document.getElementById("bookmark").innerHTML = "bookmark";
+			}
+		}
         </script>
 	    
         <style>
@@ -58,6 +91,7 @@
 		<div class="mdl-layout__header-row">
 			<span class="mdl-layout-title">US Bipartisanship</span>
 			<div class="mdl-layout-spacer"></div>
+			<i class="material-icons" id="bookmark" onclick="showBookmark()">bookmark_border</i>
 		</div>
 	</header>
 	<div class="mdl-layout__drawer">
