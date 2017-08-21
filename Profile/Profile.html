@@ -33,8 +33,41 @@
   		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
+		
+		window.onload = function () {
+			
+			function getCookie(cname) {
+            			var name = cname + "=";
+            			var decodedCookie = decodeURIComponent(document.cookie);
+            			var ca = decodedCookie.split(';');
+            			for(var i = 0; i <ca.length; i++) {
+                			var c = ca[i];
+                			while (c.charAt(0) == ' ') {
+                    				c = c.substring(1);
+                			}
+                			if (c.indexOf(name) == 0) {
+                    				return c.substring(name.length, c.length);
+                			}
+            			}
+	    			return ""
+        		};
+			
+			if (getCookie("name")){
+				document.getElementById("name").innerHTML = getCookie("name");
+			}
+			if (getCookie("schYear")){
+				document.getElementById("schYear").innerHTML = getCookie("schYear");
+			}
+			if (getCookie("summary")){
+				document.getElementById("summary").innerHTML = getCookie("summary");
+			}
+			if (getCookie("topics")){
+				document.getElementById("topics").innerHTML = getCookie("topics");
+			}
+		}
         </script>
 	    
         <style>
@@ -56,7 +89,7 @@
     <div class="demo-layout-transparent mdl-layout mdl-js-layout">
 	<header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--yellow-500 mdl-color-text--white">
 		<div class="mdl-layout__header-row">
-			<span class="mdl-layout-title">HK Elections</span>
+			<span class="mdl-layout-title">Profile</span>
 			<div class="mdl-layout-spacer"></div>
 		</div>
 	</header>
@@ -84,9 +117,12 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-			    <div class="article-content">
-            
-          </div>
+		<div class="article-content">
+			<h3>Hello <h3 id="name"></h3>,</h3>
+			<h5>Current Year In School: <h5 id="schYear"></h5></h5>
+			<p>Self-Introduction: <p id="summary"></p></p>
+		  	<p>Interested Topics: <p id="topics"></p></p>
+          	</div>
 		  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592e51db0bc7d5f7"></script> 
 			</div>
 		</div>
