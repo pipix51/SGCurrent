@@ -37,19 +37,19 @@
   		ga('create', 'UA-98296318-1', 'auto');
  		ga('send', 'pageview');
         
-        function submitInfo() {
+        	function submitInfo() {
 			var name = document.getElementById("name").value;
-            var schYear = document.getElementById("schYear").value;
+            		var schYear = document.getElementById("schYear").value;
 			var summary = document.getElementById("summary").value;
-            var topics = document.getElementById("topics").value;
+            		var topics = document.getElementById("topics").value;
             
 			var d = new Date();
     			d.setTime(d.getTime() + (30*24*60*60*1000));
     			var expires = "expires="+ d.toUTCString();
     			document.cookie = "name" + "=" + name + ";" + expires + ";path=/";
-                document.cookie = "schYear" + "=" + schYear + ";" + expires + ";path=/";
-                document.cookie = "summary" + "=" + summary + ";" + expires + ";path=/";
-                document.cookie = "topics" + "=" + topics + ";" + expires + ";path=/";
+                	document.cookie = "schYear" + "=" + schYear + ";" + expires + ";path=/";
+                	document.cookie = "summary" + "=" + summary + ";" + expires + ";path=/";
+                	document.cookie = "topics" + "=" + topics + ";" + expires + ";path=/";
 		};
       
   </script>
@@ -104,18 +104,23 @@
 	       <div class="article-content">
             <h2>Edit Your Profile</h2>
             <h5>Please input your full name, current schooling year as well as a short description of yourself. You can also include a list of subjects which you are interested in.</h5>
-            <form>
-                Name:<br>
-                <input type="text" name="name" id="name"><br>
-                School Year:<br>
-                <input type="text" name="schYear" id="schYear"><br>
-                Summary Of Myself:<br>
-                <input type="text" name="summary" id="summary"><br>
-                Interested Topics:<br>
-                <input type="text" name="topics" id="topics"><br>
-                <input type="submit" value="Submit" onClick="submitInfo()">
-                <input type="reset">
+            	<form>
+                	Name:<br>
+                	<input type="text" name="name" id="name"><br>
+                	School Year:<br>
+                	<input type="text" name="schYear" id="schYear"><br>
+                	Summary Of Myself:<br>
+                	<input type="text" name="summary" id="summary"><br>
+                	Interested Topics:<br>
+                	<input type="text" name="topics" id="topics"><br>
+                	<input type="submit" value="Submit" onClick="submitInfo()">
+                	<input type="reset">
                 </form>
+		<a href = "https://pipix51.github.io/TrendSetter/Profile/Profile.html">
+	      		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  				Return To Profile
+			</button>
+	      	</a>
           </div>
 		  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592e51db0bc7d5f7"></script> 
 			</div>
